@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Friend from './Friend';
 
-export default function FriendsList() {
+export default function FriendsList({ friendsList }) {
+  const friends = friendsList;
   return (
-    <div>FriendsList</div>
-  )
+    <ul>
+      {friends.map((friend) => (
+        <Friend key={friend.id} {...friend} />
+      ))}
+    </ul>
+  );
 }
