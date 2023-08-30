@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 export default function Friends({ name, image, balance }) {
   return (
@@ -17,7 +18,7 @@ export default function Friends({ name, image, balance }) {
       )}
       {balance === 0 && <p>You owe {name} are even</p>}
 
-      <button className='button'>Select</button>
+      <Button>Select</Button>
     </li>
   );
 }
